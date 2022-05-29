@@ -1,3 +1,6 @@
+import {config} from 'dotenv';
+config({path: '.env'});
+
 import { Client, Intents } from "discord.js";
 
 const bot = new Client({
@@ -6,4 +9,4 @@ const bot = new Client({
 
 bot.on('ready', ()=> console.log('ready'));
 
-bot.login('OTQ0ODMyOTI5NTg1MDQ1NTQ0.GktAur.1xyfIb6QFNfFvy1yPTOqN3E-at58IOux1Q-mE8');
+bot.login(process.env.BOT_TOKEN);
